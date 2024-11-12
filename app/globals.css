@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav__link {
+        @apply relative text-base font-medium w-fit block text-white;
+    }
+    
+    .nav__link::after {
+        content: '';
+        @apply block absolute h-[3px] bg-yellow-400 w-full scale-x-0 transition duration-300 origin-right;
+    }
+
+    .nav__link:hover::after {
+        @apply scale-x-100;
+    }
+
+    .text-bg{
+        background-image: linear-gradient(to right, #8750f7 0%, #ffffff 100%);
+        background-clip: text;
+        -webkit-background-clip:text ;
+        -webkit-text-fill-color: transparent;
+    }
+}
